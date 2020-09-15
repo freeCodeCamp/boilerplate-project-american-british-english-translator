@@ -166,8 +166,8 @@ suite('Unit Tests', () => {
       });
 
       test('Tea time is usually around 4 or 4.30. --> Tea time is usually around 4 or 4:30.', done => {
-        const input = 'Lunch is at 12:15 today.';
-        const output = 'Lunch is at 12.15 today.';
+        const input = 'Tea time is usually around 4 or 4.30.';
+        const output = 'Tea time is usually around 4 or 4:30.';
 
         // done();
       });
