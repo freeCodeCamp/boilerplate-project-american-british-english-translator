@@ -43,7 +43,7 @@ suite('Functional Tests', () => {
       pressed, append the message 'Error: No text to translate.' to 
       the `error-msg` `div`.
     */
-    test("'Error: No text to translate.' message appended to the `translated-sentence` `div`", done => {
+    test("'Error: No text to translate.' message appended to the `error-msg` `div`", done => {
 
       // done();
     });
