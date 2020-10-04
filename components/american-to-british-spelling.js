@@ -1,4 +1,4 @@
-export const americanToBritishSpelling = {
+modules.exports = {
   "accessorize": "accessorise",
   "accessorized": "accessorised",
   "accessorizes": "accessorises",
