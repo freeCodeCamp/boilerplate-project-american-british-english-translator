@@ -1,6 +1,6 @@
 // British equivalents of American words
 
-modules.exports = {
+module.exports = {
   "acclimate": "acclimatise",
   "acetaminophen": "paracetamol",
   "baby carriage": "pram",

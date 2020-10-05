@@ -1,6 +1,6 @@
 // American equivalents of British words
 
-modules.exports = {
+module.exports = {
   "abseil": "rappel",
   "accountancy": "accounting",
   "advert": "advertisement",
