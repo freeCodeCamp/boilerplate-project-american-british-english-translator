@@ -9,57 +9,63 @@
 const chai = require('chai');
 const assert = chai.assert;
 
-let Translator;
+let Translator = require('../components/translator.js');
 
 suite('Functional Tests', () => {
-  suiteSetup(() => {
-    // DOM already mocked -- load translator then run tests
-    Translator = require('../public/translator.js');
-  });
 
-  suite('Function ____()', () => {
-    /* 
-      The translated sentence is appended to the `translated-sentence` `div`
-      and the translated words or terms are wrapped in 
-      `<span class="highlight">...</span>` tags when the "Translate" button is pressed.
-    */
-    test("Translation appended to the `translated-sentence` `div`", done => {
-
-      // done();
+  suite('"POST" to /api/translate', () => {
+    test('POST with text and locale fields populated', done => { 
+      const text = "'Mangoes are my favorite fruit.'";
+      const locale = 'american-to-british';
+      const output = {
+        text: "Mangoes are my favorite fruit", 
+        translation: "Mangoes are my <span class='highlight'>favourite</span> fruit."
+      };
+      
+      //done();
     });
 
-    /* 
-      If there are no words or terms that need to be translated,
-      the message 'Everything looks good to me!' is appended to the
-      `translated-sentence` `div` when the "Translate" button is pressed.
-    */
-    test("'Everything looks good to me!' message appended to the `translated-sentence` `div`", done => {
-
-      // done();
+    test('POST with text and invalid locale', done => {
+      const text = "'Mangoes are my favorite fruit.'";
+      const locale = 'russian-to-spanish';
+      const error = { error: 'Invalid value for locale field' };
+      
+      //done();
     });
 
-    /* 
-      If the text area is empty when the "Translation" button is
-      pressed, append the message 'Error: No text to translate.' to 
-      the `error-msg` `div`.
-    */
-    test("'Error: No text to translate.' message appended to the `translated-sentence` `div`", done => {
+    test('POST with missing text field', done => {
+      const locale = "american-to-british";
+      const error = { error: 'Required field(s) missing' }
+      
+      //done();
+    });
+    
+    test('POST with missing locale field', done => {
+      const text = "freeCodeCamp rocks!";
+      const error = { error: 'Required field(s) missing' }
 
-      // done();
+      //done();
+    });
+    
+    test('POST with missing text', done => {
+      const text = "";
+      const locale = "american-to-british";
+      const error = { error: 'No text to translate' }
+
+      //done();
     });
 
-  });
+    test('POST with text that needs no translation', done => {
+      const text = "SaintPeter and nhcarrigan say hello!";
+      const locale = "british-to-american"
+      const output = {
+        text: "SaintPeter and nhcarrigan say hello!", 
+        translation: "Everything looks good to me!"
+        }
 
-  suite('Function ____()', () => {
-    /* 
-      The text area and both the `translated-sentence` and `error-msg`
-      `divs` are cleared when the "Clear" button is pressed.
-    */
-    test("Text area, `translated-sentence`, and `error-msg` are cleared", done => {
-
-      // done();
+      //done();
     });
 
-  });
+  });  
 
 });

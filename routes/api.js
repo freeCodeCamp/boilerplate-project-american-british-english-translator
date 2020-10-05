@@ -8,7 +8,7 @@
 
 'use strict';
 
-const Translator = require('../controllers/translator.js');
+const Translator = require('../components/translator.js');
 
 module.exports = function (app) {
   
@@ -16,6 +16,6 @@ module.exports = function (app) {
 
   app.route('/api/translate')
     .post((req, res) => {
-
+      
     });
 };
