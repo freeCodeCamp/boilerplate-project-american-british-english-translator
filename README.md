@@ -15,11 +15,3 @@
  1. If `text` requires no translation, return `"Everything looks good to me!"` for the `translation` value.
  1. All 24 unit tests are complete and passing. See `/tests/1_unit-tests.js` for the sentences you should write tests for.
  1. All 6 functional tests are complete and passing. See `/tests/2_functional-tests.js` for the functionality you should write tests for.
-
-### Notes (for `/learn` body)
-
-* All logic can go into `/components/translator.js`.
-* Create all of the unit/functional tests in `tests/1_unit-tests.js` and `tests/2_functional-tests.js`.
-* See the JavaScript files in `/components` for the different spelling and terms your application should translate
-* To run the tests on Repl.it, set NODE_ENV to test without quotes in the .env file.
-* To run the tests in the console, use the command npm run test. To open the Repl.it console, press Ctrl+Shift+P (Cmd if on a Mac) and type "open shell".
