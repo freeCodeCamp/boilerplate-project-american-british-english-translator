@@ -152,8 +152,8 @@ suite('Unit Tests', () => {
     });
 
     test('Tea time is usually around 4 or 4.30. --> Tea time is usually around 4 or 4:30.', done => {
-      const input = 'Lunch is at 12:15 today.';
-      const output = 'Lunch is at 12.15 today.';
+      const input = 'Tea time is usually around 4 or 4.30 today.';
+      const output = 'Tea time is usually around 4 or 4:30 today.';
 
       // done();
     });
@@ -164,7 +164,7 @@ suite('Unit Tests', () => {
     suite('Highlight American to British English', () => {
       test('Highlight "Mangoes" in the "Mangoes are my favorite fruit." translation', done => {
         const input = 'Mangoes are my favorite fruit.';
-        const output = '<span class="highlight">Mangoes</span> are my favourite fruit.';
+        const output = 'Mangoes are my <span class="highlight">favourite</span> fruit.';
 
         // done();
       });
