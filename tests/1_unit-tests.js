@@ -171,7 +171,7 @@ suite('Unit Tests', () => {
 
       test('Highlight "yoghurt" in the "I ate yogurt for breakfast." translation', done => {
         const input = 'I ate yogurt for breakfast.';
-        const output = 'I ate <span class="highlight">yoghurt</class> for breakfast.';
+        const output = 'I ate <span class="highlight">yoghurt</span> for breakfast.';
 
         // done();
       });
