@@ -1,5 +1,3 @@
-// British equivalents of American words
-
 module.exports = {
   "acclimate": "acclimatise",
   "acetaminophen": "paracetamol",

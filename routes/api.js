@@ -1,11 +1,3 @@
-/*
-*
-*
-*       Complete the API routing below
-*
-*
-*/
-
 'use strict';
 
 const Translator = require('../components/translator.js');

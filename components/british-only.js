@@ -1,5 +1,3 @@
-// American equivalents of British words
-
 module.exports = {
   "abseil": "rappel",
   "accountancy": "accounting",
