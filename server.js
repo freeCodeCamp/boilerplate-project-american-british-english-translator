@@ -10,6 +10,7 @@ const userRoutes        = require('./routes/api.js');
 
 const app = express();
 
+process.env.NODE_ENV = 'test';
 app.use('/public', express.static(process.cwd() + '/public'));
 app.use(cors({origin: '*'})); //For FCC testing purposes only
 
@@ -35,7 +36,7 @@ app.use(function(req, res, next) {
     .send('Not Found');
 });
 
-const portNum = process.env.PORT || 3000;
+const portNum = process.env.PORT || 80;
 
 // Start our server and tests!
 app.listen(portNum, () => {

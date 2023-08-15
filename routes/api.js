@@ -8,6 +8,10 @@ module.exports = function (app) {
 
   app.route('/api/translate')
     .post((req, res) => {
-      
+      if (!req.body) {
+		  res.json({error: "Invalid request"})
+	  } else {
+		  res.json(translator.translate(req.body))
+	  }
     });
 };
