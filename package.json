@@ -1,6 +1,6 @@
 {
   "name": "american-british-english-translator",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Quality Assurance 5: American / British English Translator",
   "main": "server.js",
   "scripts": {
